@@ -16,40 +16,79 @@
 # An exercise on Classes, lecture 12.
 
 
-class Person:
+# class Person:
+#
+#     def __init__(self, name):
+#         """Create a new person with the given name and no friends."""
+#
+#     # TODO: Implement this
+#
+#     def add_friend(self, other):
+#         """Make this person and the given other person friends."""
+#
+#     # TODO: Implement this.
+#
+#     def is_friends_with(self, other):
+#         """Returns True if and only if other is a friend of this person."""
+#         # TODO: Fix this
+#         return False
+#
+#
+# # DO NOT MODIFY CODE BELOW THIS LINE
+# import unittest
+#
+#
+# class FriendTests(unittest.TestCase):
+#
+#     def test_init(self):
+#         alice = Person('Alice')
+#         self.assertEqual(alice.name, 'Alice')
+#         self.assertEqual(alice.friends, [])
+#
+#     def test_add(self):
+#         alice = Person('Alice')
+#         bob = Person('Bob')
+#         alice.add_friend(bob)
+#         self.assertTrue(alice.is_friends_with(bob))
+#         self.assertTrue(bob.is_friends_with(alice))
 
-    def __init__(self, name):
-        """Create a new person with the given name and no friends."""
+# Q3 Classes are a useful way of storing related data items (in much the same way that a dictionary can store key-value pairs).
+# The code in this exercise implements a class for holding name and email address information.
+# The function extract_names operates on a list of Contact objects to extract the names and return them in sorted order.
+class Contact:
+    """Encapsulates an email contact."""
 
-    # TODO: Implement this
+    def __init__(self, name, email):
+        self.name = name
+        self.email = email
 
-    def add_friend(self, other):
-        """Make this person and the given other person friends."""
 
-    # TODO: Implement this.
+# DO NOT MODIFY CODE ABOVE THIS LINE
 
-    def is_friends_with(self, other):
-        """Returns True if and only if other is a friend of this person."""
-        # TODO: Fix this
-        return False
+def extract_names(address_book):
+    """Return a sorted list of all names in an address book,
+    implemented as a list of Contact objects."""
+
+    # 1.How do you print every contact in the list of contact? (hint: for loop)
+    for i in addr_book:
+    # 2. How do you print every contact _name_ in the list of contact? (hint: instance.name)
+        print (i)
+    # 3. How do you add every contact _name_ to a new list (Hint: 'list.append')?
+    contact = addr_book.append(Contact.name)
+    # 4. How do you then sort the list with only the names in it (Hint: sorted) ?
+    sorted_contact = sorted(contact)
+    print (sorted_contact)
+
+    # TODO: implement this function and replace the return statement
 
 
 # DO NOT MODIFY CODE BELOW THIS LINE
-import unittest
 
+addr_book = []
+addr_book.append(Contact("Mickey Mouse", "mickey@disneyland.com"))
+addr_book.append(Contact("Minnie Mouse", "minnie@disneyland.com"))
+addr_book.append(Contact("Goofy", "goofy@disneyland.com"))
+addr_book.append(Contact("Pluto", "pluto@disneyland.com"))
+addr_book.append(Contact("Winnie the Pooh", "poohbear@disneyland.com"))
 
-class FriendTests(unittest.TestCase):
-
-    def test_init(self):
-        alice = Person('Alice')
-        self.assertEqual(alice.name, 'Alice')
-        self.assertEqual(alice.friends, [])
-
-    def test_add(self):
-        alice = Person('Alice')
-        bob = Person('Bob')
-        alice.add_friend(bob)
-        self.assertTrue(alice.is_friends_with(bob))
-        self.assertTrue(bob.is_friends_with(alice))
-
-
+print("\n".join(extract_names(addr_book)))
