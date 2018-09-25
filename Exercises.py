@@ -70,9 +70,9 @@ def extract_names(address_book):
     implemented as a list of Contact objects."""
 
     # 1.How do you print every contact in the list of contact? (hint: for loop)
-    for i in addr_book:
+    for Contact.name in addr_book:
     # 2. How do you print every contact _name_ in the list of contact? (hint: instance.name)
-        print (i)
+        print (Contact.name)
     # 3. How do you add every contact _name_ to a new list (Hint: 'list.append')?
     contact = addr_book.append(Contact.name)
     # 4. How do you then sort the list with only the names in it (Hint: sorted) ?
