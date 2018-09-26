@@ -74,8 +74,6 @@ def extract_names(address_book):
         names.append(contact.name)
     return sorted(names)
 
-    # TODO: implement this function and replace the return statement
-
 
 # DO NOT MODIFY CODE BELOW THIS LINE
 
