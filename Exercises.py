@@ -48,13 +48,14 @@
 #     def test_add(self):
 #         alice = Person('Alice')
 #         bob = Person('Bob')
-#         alice.add_friend(bob)
-#         self.assertTrue(alice.is_friends_with(bob))
-#         self.assertTrue(bob.is_friends_with(alice))
+# #         alice.add_friend(bob)
+# #         self.assertTrue(alice.is_friends_with(bob))
+# #         self.assertTrue(bob.is_friends_with(alice))
+#
+# # Q3 Classes are a useful way of storing related data items (in much the same way that a dictionary can store key-value pairs).
+# # The code in this exercise implements a class for holding name and email address information.
+# # The function extract_names operates on a list of Contact objects to extract the names and return them in sorted order.
 
-# Q3 Classes are a useful way of storing related data items (in much the same way that a dictionary can store key-value pairs).
-# The code in this exercise implements a class for holding name and email address information.
-# The function extract_names operates on a list of Contact objects to extract the names and return them in sorted order.
 class Contact:
     """Encapsulates an email contact."""
 
@@ -62,22 +63,16 @@ class Contact:
         self.name = name
         self.email = email
 
-
-# DO NOT MODIFY CODE ABOVE THIS LINE
+# # DO NOT MODIFY CODE ABOVE THIS LINE
 
 def extract_names(address_book):
     """Return a sorted list of all names in an address book,
     implemented as a list of Contact objects."""
 
-    # 1.How do you print every contact in the list of contact? (hint: for loop)
-    for Contact.name in addr_book:
-    # 2. How do you print every contact _name_ in the list of contact? (hint: instance.name)
-        print (Contact.name)
-    # 3. How do you add every contact _name_ to a new list (Hint: 'list.append')?
-    contact = addr_book.append(Contact.name)
-    # 4. How do you then sort the list with only the names in it (Hint: sorted) ?
-    sorted_contact = sorted(contact)
-    print (sorted_contact)
+    names = []
+    for contact in addr_book:
+        names.append(contact.name)
+    return sorted(names)
 
     # TODO: implement this function and replace the return statement
 
@@ -92,3 +87,6 @@ addr_book.append(Contact("Pluto", "pluto@disneyland.com"))
 addr_book.append(Contact("Winnie the Pooh", "poohbear@disneyland.com"))
 
 print("\n".join(extract_names(addr_book)))
+
+
+
