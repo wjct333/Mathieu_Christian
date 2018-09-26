@@ -70,7 +70,7 @@ def extract_names(address_book):
     implemented as a list of Contact objects."""
 
     names = []
-    for contact in addr_book:
+    for contact in address_book:
         names.append(contact.name)
     return sorted(names)
 
@@ -85,6 +85,4 @@ addr_book.append(Contact("Pluto", "pluto@disneyland.com"))
 addr_book.append(Contact("Winnie the Pooh", "poohbear@disneyland.com"))
 
 print("\n".join(extract_names(addr_book)))
-
-
 
